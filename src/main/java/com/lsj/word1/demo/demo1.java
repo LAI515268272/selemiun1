@@ -31,13 +31,23 @@ public class demo1 {
     }
 
     @Test
-    public void test1(){
+    public void test1()throws Exception{
 
         chrome.get("http://www.baidu.com");
+        Thread.sleep(5000);
 
         chrome.findElement(By.id("kw")).sendKeys("java");
+        Thread.sleep(2000);
 
         chrome.findElement(By.xpath("//*[@id=\"su\"]")).click();
+        Thread.sleep(6000);
+
+        chrome.findElement(By.xpath("//*[@id=\"2\"]/h3/a")).click();
+
+        Thread.sleep(10000);
+
+        chrome.quit();
+
 
 
 
