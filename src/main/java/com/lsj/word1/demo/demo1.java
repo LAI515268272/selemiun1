@@ -52,5 +52,9 @@ public class demo1 {
 
 
     }
+    @Test
+    public void test2(){
+        
+    }
 
 }
