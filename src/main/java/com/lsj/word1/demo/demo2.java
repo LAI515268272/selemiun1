@@ -5,6 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -32,9 +33,19 @@ public class demo2 {
 
 
     @Test
-    public void sle(){
+    public void sle()throws Exception{
 
-        chrome.get("http://www.github.com");
+        chrome.get("http://eds.newtouch.cn/eds3/login.html");
+
+        chrome.findElement(By.id("UserId")).sendKeys("191105");
+
+        chrome.findElement(By.id("UserPassword")).sendKeys("lsj515268272");
+
+        chrome.findElement(By.id("btnSubmit")).click();
+
+        /*无法点击*/
+        /*chrome.findElement(By.xpath("/html/body/form/div[3]/div[1]/div[2]/div[2]/div[1]/div/span/a/span")).click();*/
+
     }
 
 }
